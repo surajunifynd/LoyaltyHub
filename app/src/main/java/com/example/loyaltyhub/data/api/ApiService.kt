@@ -1,4 +1,4 @@
-package com.example.loyaltyhub.data
+package com.example.loyaltyhub.data.api
 
 import com.example.loyaltyhub.domain.Loyalty
 import retrofit2.Call
