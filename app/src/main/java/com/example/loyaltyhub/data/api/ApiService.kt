@@ -1,6 +1,6 @@
 package com.example.loyaltyhub.data.api
 
-import com.example.loyaltyhub.domain.Loyalty
+import com.example.loyaltyhub.model.Loyalty
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Header
