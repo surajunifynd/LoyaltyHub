@@ -160,3 +160,5 @@ data class Status(
     val code: Int,
     val message: String
 ) : Serializable
+
+data class ErrorResponse(val status: Status) : Serializable

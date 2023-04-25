@@ -1,6 +1,7 @@
 package com.example.loyaltyhub.presentation
 
 import com.example.loyaltyhub.data.api.RetrofitClient
+import com.example.loyaltyhub.getErrorResponse
 import com.example.loyaltyhub.model.PuzzleFeedWrapper
 import com.example.loyaltyhub.ui.activity.PuzzleFeedActivity
 import com.example.loyaltyhub.ui.view.PuzzleFeedView
