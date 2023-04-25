@@ -118,6 +118,21 @@ data class ServerResponseData(
     val hasGifts: Int,
     val isImagePuzzleEnable: Int
 )
+data class MediaItem(
+    val mediaUrl: String,
+    val mediaType: String,
+    var thumbnailUrl: String = "",
+    var thumbnailType: String = ""
+) : Serializable
+data class ReferralBenefit(
+    val benefitType: Int,
+    val benefitId: Long,
+    val referType: Int,
+    val value: Double,
+    val displayName: String,
+    val name: String,
+    val logo: String
+) : Serializable
 data class ParkingSlots(
     val id: Long,
     val parkingId: Long,
