@@ -140,6 +140,33 @@ data class RewardTransaction(
     val logo: String,
     val storeLogo: String
 ) : Serializable
+data class SpinWheelFeed(
+    val spinWheels: MutableList<SpinWheels>?,
+    val totalPoints: String,
+    val gems: String,
+    val totalPages: Int?,
+
+    ):Serializable
+data class SpinWheels(
+    val spinPerDay: Long,
+    val id: Long,
+    val totalSpins: Long,
+    val unlockType: Long,
+    val canAttempt: Long,
+    val unlockValue: Long,
+    val name: String,
+    val description: String,
+    val termsAndConditions: String,
+    val totalAttempts: Long,
+    val attempts: Long,
+    val benefitsData: ArrayList<BenefitsDataSpinWin>,
+) : Serializable
+data class BenefitsDataSpinWin(
+    val benefitId: Long,
+    val benefitType: Long,
+    val logo: String,
+    val value: Any,
+) : Serializable
 data class ExtraImage(
     val image: String,
     val mediaType: String
@@ -753,6 +780,10 @@ data class PuzzleFeed(
     val totalPages: Int?,
     val id : String
 ): Serializable
+data class SpinWheelFeedWrapper(
+    val status: Status,
+    val data: SpinWheelFeed
+)
 data class Puzzles(
     val id: String,
     val unlockType: Long,

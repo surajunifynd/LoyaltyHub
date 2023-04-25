@@ -24,4 +24,12 @@ interface ApiService {
         @Query("pageSize") pageSize: Int = 20
     ): Call<PuzzleFeedWrapper>
 
+    @GET("customers/spinWheel")
+    fun getSpinWheelFeed(
+        @Header("Authorization") token: String,
+        @Header("mallid") mallId: String,
+        @Query("pageNo") pageNo: Int,
+        @Query("pageSize") pageSize: Int = Constants.IDEAL_PAGE_SIZE
+    ): Call<SpinWheelFeedWrapper>
+
 }
