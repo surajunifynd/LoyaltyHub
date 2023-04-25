@@ -1,3 +1,5 @@
+package com.example.loyaltyhub.presentation
+
 import com.example.loyaltyhub.LoyaltyHubView
 import com.example.loyaltyhub.data.api.RetrofitClient
 import com.example.loyaltyhub.model.Loyalty

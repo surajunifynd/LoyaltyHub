@@ -1,9 +1,8 @@
 package com.example.loyaltyhub
 
-import LoyaltyHubPresenter
+import com.example.loyaltyhub.presentation.LoyaltyHubPresenter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.loyaltyhub.R
 import com.example.loyaltyhub.databinding.ActivityLoyaltyhubBinding
 
 class LoyaltyHubActivity : AppCompatActivity() , LoyaltyHubView{
