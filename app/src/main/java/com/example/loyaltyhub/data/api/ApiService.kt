@@ -2,6 +2,7 @@ package com.example.loyaltyhub.data.api
 
 import com.example.loyaltyhub.model.ServerResponseData
 import com.example.loyaltyhub.model.PuzzleFeedWrapper
+import com.example.loyaltyhub.model.ServerResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -13,7 +14,7 @@ interface ApiService {
     fun getLoyaltyHub(
         @Header("Authorization") toke: String,
         @Header("mallId") mallId: String,
-    ) : Call<ServerResponseData>
+    ) : Call<ServerResponse>
 
     @GET("customers/imagePuzzle")
     fun getPuzzleFeed(
