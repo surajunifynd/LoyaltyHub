@@ -152,3 +152,11 @@ data class BenefitsDataPuzzle(
     val name: String,
     val value: Any,
 ) : Serializable
+data class PuzzleFeedWrapper(
+    val status: Status,
+    val data: PuzzleFeed
+)
+data class Status(
+    val code: Int,
+    val message: String
+) : Serializable

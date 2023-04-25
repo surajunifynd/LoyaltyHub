@@ -1,14 +1,13 @@
-package com.example.loyaltyhub
+package com.example.loyaltyhub.ui.activity
 
-import com.example.loyaltyhub.presentation.LoyaltyHubPresenter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.example.loyaltyhub.LoyaltyHubView
 import com.example.loyaltyhub.databinding.ActivityLoyaltyhubBinding
 import com.example.loyaltyhub.ui.LoyaltyHubViewModel
 
-class LoyaltyHubActivity : AppCompatActivity() , LoyaltyHubView{
+class LoyaltyHubActivity : AppCompatActivity() , LoyaltyHubView {
 
     private lateinit var binding: ActivityLoyaltyhubBinding
     //private lateinit var presenter : LoyaltyHubPresenter
