@@ -25,8 +25,16 @@ class LoyaltyHubActivity : AppCompatActivity() , LoyaltyHubView{
         val temp = loyaltyHubViewModel.getLoyaltyHome(token, "mall_1")
         if(!isLoyaltyHomeObserved) {
             temp?.observe(this, {
-
+                onImagePuzzleReceived(it.isImagePuzzleEnable)
             })
+        }
+    }
+    private fun onImagePuzzleReceived(isEnable: Int) {
+        if(isEnable == 1) {
+
+        }
+        else {
+
         }
     }
 }
