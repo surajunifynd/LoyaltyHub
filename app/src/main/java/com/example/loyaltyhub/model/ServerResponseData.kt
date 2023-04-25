@@ -140,6 +140,10 @@ data class RewardTransaction(
     val logo: String,
     val storeLogo: String
 ) : Serializable
+data class ExtraImage(
+    val image: String,
+    val mediaType: String
+) : Serializable
 data class ParkingSlots(
     val id: Long,
     val parkingId: Long,
