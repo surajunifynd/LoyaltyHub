@@ -1,7 +1,6 @@
 package com.example.loyaltyhub.ui.activity
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.loyaltyhub.databinding.ActivityPuzzlefeedBinding
 import com.example.loyaltyhub.presentation.PuzzleFeedPresenter

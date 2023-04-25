@@ -1,15 +1,13 @@
 package com.example.loyaltyhub.presentation
 
-import com.example.loyaltyhub.data.api.ApiService
 import com.example.loyaltyhub.data.api.RetrofitClient
 import com.example.loyaltyhub.model.PuzzleFeedWrapper
-import com.example.loyaltyhub.ui.view.PuzzleFeedView
+import com.example.loyaltyhub.ui.activity.PuzzleFeedActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
 
-class PuzzleFeedPresenter(private val view: PuzzleFeedView) {
+class PuzzleFeedPresenter(private val view: PuzzleFeedActivity) {
 
     fun getPuzzleFeed(token: String, mallId: String, pageNo: Int) {
         RetrofitClient?.apiService?.getPuzzleFeed(
