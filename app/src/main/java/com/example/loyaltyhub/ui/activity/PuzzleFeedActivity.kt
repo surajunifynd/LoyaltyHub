@@ -47,4 +47,16 @@ class PuzzleFeedActivity : AppCompatActivity(), PuzzleFeedView {
 
         }
     }
+
+    override fun onError(message: String) {
+        TODO("Not yet implemented")
+    }
+
+    override fun showLoader() {
+        TODO("Not yet implemented")
+    }
+
+    override fun hideLoader() {
+        TODO("Not yet implemented")
+    }
 }

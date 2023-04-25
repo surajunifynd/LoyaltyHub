@@ -162,3 +162,8 @@ data class Status(
 ) : Serializable
 
 data class ErrorResponse(val status: Status) : Serializable
+
+data class ServerResponse(
+    val status: Status,
+    val data: Loyalty
+)
