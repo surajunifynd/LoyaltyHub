@@ -7,7 +7,7 @@ open class RetrofitClient {
     companion object {
 
     val apiService: ApiService = Retrofit.Builder()
-        .baseUrl("")
+        .baseUrl("https://asgard-apis-stage.frt.one/v1/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
         .create(ApiService::class.java)
