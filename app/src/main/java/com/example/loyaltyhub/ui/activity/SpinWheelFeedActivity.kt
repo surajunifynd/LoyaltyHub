@@ -29,7 +29,7 @@ class SpinWheelFeedActivity : AppCompatActivity() , SpinWheelFeedView{
 
     override fun onSpinWheelFeedReceived(responseData: SpinWheelFeed, totalPages: Int) {
         if(responseData.spinWheels.isNullOrEmpty()) {
-            binding
+
         }
     }
 
