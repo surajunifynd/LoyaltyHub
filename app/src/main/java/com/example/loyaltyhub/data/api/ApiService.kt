@@ -1,8 +1,9 @@
 package com.example.loyaltyhub.data.api
 
-import com.example.loyaltyhub.model.ServerResponseData
+import com.example.loyaltyhub.Constants
 import com.example.loyaltyhub.model.PuzzleFeedWrapper
 import com.example.loyaltyhub.model.ServerResponse
+import com.example.loyaltyhub.model.SpinWheelFeedWrapper
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -31,5 +32,6 @@ interface ApiService {
         @Query("pageNo") pageNo: Int,
         @Query("pageSize") pageSize: Int = Constants.IDEAL_PAGE_SIZE
     ): Call<SpinWheelFeedWrapper>
+
 
 }
