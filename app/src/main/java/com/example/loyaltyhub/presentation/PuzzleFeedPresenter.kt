@@ -20,7 +20,7 @@ class PuzzleFeedPresenter(private val view: PuzzleFeedView) {
                 call: Call<PuzzleFeedWrapper>,
                 response: Response<PuzzleFeedWrapper>
             ) {
-                //view.hideLoader()
+                view.hideLoader()
                 if (response.code() == 200) {
                     val data = response.body()?.data
                     if (data != null) {
@@ -28,8 +28,8 @@ class PuzzleFeedPresenter(private val view: PuzzleFeedView) {
                         view.onPuzzleFeedReceived(data, totalPages)
                     }
                 } else {
-                    //val errorResponse = getErrorResponse(response)
-                    //view.onError(errorResponse)
+                    val errorResponse = getErrorResponse(response)
+                    view.onError(errorResponse)
                 }
             }
 
