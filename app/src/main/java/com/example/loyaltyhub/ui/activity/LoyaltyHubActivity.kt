@@ -2,12 +2,17 @@ package com.example.loyaltyhub.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.example.loyaltyhub.LoyaltyHubView
+import com.example.loyaltyhub.R
 import com.example.loyaltyhub.databinding.ActivityLoyaltyhubBinding
 import com.example.loyaltyhub.ui.LoyaltyHubViewModel
+import com.example.loyaltyhub.ui.view.PuzzleFeedView
 
-class LoyaltyHubActivity : AppCompatActivity() , LoyaltyHubView {
+class LoyaltyHubActivity : AppCompatActivity() , LoyaltyHubView , View.OnClickListener
+
+{
 
     private lateinit var binding: ActivityLoyaltyhubBinding
     //private lateinit var presenter : LoyaltyHubPresenter
@@ -27,7 +32,7 @@ class LoyaltyHubActivity : AppCompatActivity() , LoyaltyHubView {
         val temp = loyaltyHubViewModel.getLoyaltyHome(token, "mall_1")
         if(!isLoyaltyHomeObserved) {
             temp?.observe(this, {
-                onImagePuzzleReceived(it.isImagePuzzleEnable)
+                //onImagePuzzleReceived(it.isImagePuzzleEnable)
             })
         }
     }
@@ -37,6 +42,14 @@ class LoyaltyHubActivity : AppCompatActivity() , LoyaltyHubView {
         }
         else {
 
+        }
+    }
+
+    override fun onClick(v: View?) {
+        when(v?.id) {
+            R.id.cvImagePuzzle -> {
+                PuzzleFeedActivity.startActivity(this)
+            }
         }
     }
 }
