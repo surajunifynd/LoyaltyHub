@@ -1,5 +1,7 @@
 package com.example.loyaltyhub.model
 
+import java.io.Serializable
+
 data class Loyalty(
     val totalPoints: Any,
     val referralCode: String,
@@ -116,3 +118,37 @@ data class Loyalty(
     val hasGifts: Int,
     val isImagePuzzleEnable: Int
 )
+data class PuzzleFeed(
+    val puzzles: MutableList<Puzzles>?,
+    val totalPoints: String,
+    val gems: String,
+    val totalPages: Int?,
+    val id : String
+): Serializable
+data class Puzzles(
+    val id: String,
+    val unlockType: Long,
+    val canAttempt: Long,
+    val unlockValue: Long,
+    val name: String,
+    val description: String,
+    val termsAndConditions: String,
+    val totalAttempts: Long,
+    val targeting: Long,
+    val attempts: Long,
+    val totalPuzzles: Int,
+    val totalUsed: Int,
+    val image: String,
+    val timePeriodInSeconds: Int,
+    val imageGridType: Int,
+    val benefitsData: ArrayList<BenefitsDataPuzzle>,
+) : Serializable
+data class BenefitsDataPuzzle(
+    val benefitId: Long,
+    val benefitType: Long,
+    val logo: String,
+    val couponName: String,
+    val displayName: String,
+    val name: String,
+    val value: Any,
+) : Serializable
