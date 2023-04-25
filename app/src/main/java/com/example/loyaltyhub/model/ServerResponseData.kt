@@ -133,6 +133,13 @@ data class ReferralBenefit(
     val name: String,
     val logo: String
 ) : Serializable
+data class RewardTransaction(
+    val name: String,
+    val couponName: String,
+    val displayName: String,
+    val logo: String,
+    val storeLogo: String
+) : Serializable
 data class ParkingSlots(
     val id: Long,
     val parkingId: Long,
