@@ -6,7 +6,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 open class RetrofitClient {
     companion object {
 
-
     val apiService: ApiService = Retrofit.Builder()
         .baseUrl("")
         .addConverterFactory(GsonConverterFactory.create())
