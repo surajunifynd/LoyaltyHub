@@ -11,6 +11,12 @@ import retrofit2.http.Query
 
 interface ApiService {
 
+    @GET("customers/userProfile")
+    fun getUserDetails(
+        @Header("Authorization") authHeader: String,
+        @Header("mallid") mallId: String
+    ): Call<ServerResponse>
+
     @GET("customers/loyaltyHub")
     fun getLoyaltyHub(
         @Header("Authorization") token: String,

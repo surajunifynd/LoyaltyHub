@@ -80,9 +80,7 @@
                 android:src="@drawable/coi"
                 android:padding="10dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvPoints"
-
-                />
+                app:layout_constraintTop_toBottomOf="@id/tvPoints" />
             <TextView
                 android:id="@+id/tvPointsMain"
                 android:layout_width="wrap_content"

@@ -18,6 +18,8 @@ class PuzzleFeedActivity : AppCompatActivity(), PuzzleFeedView {
     private var totalPages = 1
     var totalPoints: Int = 0
     var totalGems: Int = 0
+    private var currentPage = 1
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPuzzlefeedBinding.inflate(layoutInflater)
@@ -38,7 +40,7 @@ class PuzzleFeedActivity : AppCompatActivity(), PuzzleFeedView {
     }
 
     private fun getPuzzleFeed() {
-        presenter.getPuzzleFeed(token, "mall_1", 20)
+        presenter.getPuzzleFeed(token, "mall_1", currentPage)
     }
 
     override fun onPuzzleFeedReceived(responseData: PuzzleFeed, totalPages: Int) {
