@@ -14,8 +14,8 @@ object LoyaltyHubRepository {
     val loyaltyHomeData = MutableLiveData<ServerResponseData>()
     fun getLoyaltyHub(token: String, mallId: String): MutableLiveData<ServerResponseData> {
         loyaltyHomeData.value = null
-        RetrofitClient.apiService?.getLoyaltyHub(token, mallId)
-            ?.enqueue(object : Callback<ServerResponse> {
+        RetrofitClient.apiServiceRc.getLoyaltyHub(token, mallId)
+            .enqueue(object : Callback<ServerResponse> {
                 override fun onResponse(call: Call<ServerResponse>, response: Response<ServerResponse>) {
                     val data = response.body()?.data
                     if(response.code() == 200 && data !=null) {

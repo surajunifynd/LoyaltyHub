@@ -1,5 +1,7 @@
 package com.example.loyaltyhub.ui.activity
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.loyaltyhub.R
@@ -21,6 +23,14 @@ class SpinWheelFeedActivity : AppCompatActivity() , SpinWheelFeedView{
         getSpinWheelFeed()
 
     }
+
+    companion object {
+        fun startActivity(context: Context) {
+            val intent = Intent(context, SpinWheelFeedActivity::class.java)
+            context.startActivity(intent)
+        }
+    }
+
     private fun getSpinWheelFeed() {
 
             presenter.getSpinWheelFeed(

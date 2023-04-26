@@ -13,7 +13,7 @@ interface ApiService {
 
     @GET("customers/loyaltyHub")
     fun getLoyaltyHub(
-        @Header("Authorization") toke: String,
+        @Header("Authorization") token: String,
         @Header("mallId") mallId: String,
     ) : Call<ServerResponse>
 

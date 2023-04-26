@@ -1,4 +1,4 @@
-package com.example.loyaltyhub.ui
+package com.example.loyaltyhub.viewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
