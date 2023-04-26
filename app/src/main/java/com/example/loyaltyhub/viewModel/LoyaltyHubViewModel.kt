@@ -10,8 +10,8 @@ class LoyaltyHubViewModel: ViewModel() {
 
     var loyaltyHomeData : MutableLiveData<ServerResponseData>? = null
 
-    fun getLoyaltyHome(token: String, mallId: String) : LiveData<ServerResponseData> {
+    fun getLoyaltyHome(token: String, mallId: String) : LiveData<ServerResponseData>? {
         loyaltyHomeData = LoyaltyHubRepository.getLoyaltyHub(token, mallId)
-        return loyaltyHomeData as MutableLiveData<ServerResponseData>
+        return loyaltyHomeData
     }
 }
