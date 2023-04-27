@@ -19,7 +19,8 @@ class ProfilePresenter(private val profileView: ProfileView)  {
                 override fun onResponse(
                     call: Call<ServerResponse>,
                     response: Response<ServerResponse>
-                ) {
+                )
+                {
                     if (showLoader)
                         profileView.hideLoader()
                     if (response.body()!!.status.code == 200) {
