@@ -15,14 +15,8 @@ class LoyaltyHubPresenter(private val loyaltyPresenter: LoyaltyView) {
                     call: Call<ServerResponse>,
                     response: Response<ServerResponse>
                 ) {
-//                    if (response.isSuccessful) {
-//                        val data = response.body()
-//                        if (data != null && data != null) {
-//                            loyaltyPresenter.onServerLoyaltyHubReceived(response.body()!!.data)
-//                        }
-//                    }
                     val data = response.body()?.data
-                    if(response.code() == 200 && data !=null) {
+                    if (response.code() == 200 && data != null) {
                         loyaltyPresenter.onServerLoyaltyHubReceived(response.body()!!.data)
                     } else {
                         val errorResponse = getErrorResponse(response)

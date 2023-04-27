@@ -118,12 +118,14 @@ data class ServerResponseData(
     val hasGifts: Int,
     val isImagePuzzleEnable: Int
 )
+
 data class MediaItem(
     val mediaUrl: String,
     val mediaType: String,
     var thumbnailUrl: String = "",
     var thumbnailType: String = ""
 ) : Serializable
+
 data class ReferralBenefit(
     val benefitType: Int,
     val benefitId: Long,
@@ -133,6 +135,7 @@ data class ReferralBenefit(
     val name: String,
     val logo: String
 ) : Serializable
+
 data class RewardTransaction(
     val name: String,
     val couponName: String,
@@ -140,13 +143,15 @@ data class RewardTransaction(
     val logo: String,
     val storeLogo: String
 ) : Serializable
+
 data class SpinWheelFeed(
     val spinWheels: MutableList<SpinWheels>?,
     val totalPoints: String,
     val gems: String,
     val totalPages: Int?,
 
-    ):Serializable
+    ) : Serializable
+
 data class SpinWheels(
     val spinPerDay: Long,
     val id: Long,
@@ -161,16 +166,19 @@ data class SpinWheels(
     val attempts: Long,
     val benefitsData: ArrayList<BenefitsDataSpinWin>,
 ) : Serializable
+
 data class BenefitsDataSpinWin(
     val benefitId: Long,
     val benefitType: Long,
     val logo: String,
     val value: Any,
 ) : Serializable
+
 data class ExtraImage(
     val image: String,
     val mediaType: String
 ) : Serializable
+
 data class ParkingSlots(
     val id: Long,
     val parkingId: Long,
@@ -180,26 +188,31 @@ data class ParkingSlots(
     val totalAvailable: Int,
     val totalBooked: Int
 ) : Serializable
+
 data class ParkingCost(
     val typeText: String,
     val value: Double,
     val type: Int
 ) : Serializable
+
 data class IssueFeatures(
     val id: Long,
     val name: String
 ) : Serializable
+
 data class ParkingHome(
     val parkingEnabled: Int,
     val hasCars: Int,
     val bookings: ParkingBookingObject,
     val available: Long
 ) : Serializable
+
 data class ParkingZones(
     val parkingId: Long,
     val zoneName: String,
     val availableSlots: Int
 ) : Serializable
+
 data class TierDetails(
     val id: Long,
     val badgeImage: String,
@@ -224,10 +237,12 @@ data class TierDetails(
     var isSelected: Boolean = false,
     var isTopCurrent: Boolean = false
 ) : Serializable
+
 data class RewardCountForScratch(
     val count: Long,
     val benefitType: Long
-):Serializable
+) : Serializable
+
 data class ParkingBookingObject(
     val id: Long,
     val bookingId: String,
@@ -248,6 +263,7 @@ data class TableBookingSettings(
     val isEnabled: Boolean,
     val url: String?
 ) : Serializable
+
 data class ScratchCardHistoryList(
     val id: String,
     val name: String,
@@ -263,6 +279,7 @@ data class ScratchCardHistoryList(
     val expiredDate: String,
     val transactionId: String
 ) : Serializable
+
 data class Benefit(
     val value: Long,
     val id: Long,
@@ -271,7 +288,7 @@ data class Benefit(
     val name: String,
     val retailerId: Long,
     val benefitType: Long
-):Serializable
+) : Serializable
 
 data class MallVisitRetailers(
     val id: Long,
@@ -282,6 +299,7 @@ data class MallVisitRetailers(
     val retailerLogo: String,
     val isFavorite: Number = 0
 ) : Serializable
+
 data class SetsData(
     val id: Long,
     val name: String,
@@ -295,6 +313,7 @@ data class SetsData(
     var isSelected: Boolean,
     var isPreAdded: Boolean,
 ) : Serializable
+
 data class RetailerDetails(
     val id: Long,
     val retailerName: String,
@@ -315,6 +334,7 @@ data class RetailerDetails(
         }
     }
 }
+
 data class SurveyDetail(
     val id: Long,
     val name: String,
@@ -337,11 +357,13 @@ data class SCRetailerCategory(
     val retailerName: String,
     val retailerLogo: String
 ) : Serializable
+
 data class RetailerCategory(
     val id: Long,
     val categoryName: String,
     val categoryImage: String = ""
 ) : Serializable
+
 data class ScanCampaign(
     val id: Long,
     val campaignName: String,
@@ -377,6 +399,7 @@ data class ScanCampaign(
         return count
     }
 }
+
 data class CampaignRetailers(
     val benefits: Int,
     val threshold: Double,
@@ -389,6 +412,7 @@ data class CampaignRetailers(
     val isAwarded: String,
     val completed: Double
 ) : Serializable
+
 data class Car(
     val id: Long,
     val mallId: Long,
@@ -397,10 +421,12 @@ data class Car(
     val isActive: Int,
     val isDeleted: Int
 ) : Serializable
+
 data class ScanCampaignV2(
     val totalActiveCampaign: Int,
     val completedCampaign: Int
 ) : Serializable
+
 data class RuleList(
     val id: Long,
     val ruleFrequency: Long,
@@ -417,6 +443,7 @@ data class RuleList(
     val isCompleted: Long,
     val completedOn: String
 ) : Serializable
+
 data class ScanHistoryList(
     val id: Long,
     val storePic: String,
@@ -440,6 +467,7 @@ data class ScanHistoryList(
     val retailerMultiplierPoints: Double,
     val extraImages: ArrayList<ExtraImage>
 ) : Serializable
+
 data class Reward(
     val id: Long,
     val transactionId: String,
@@ -458,8 +486,9 @@ data class Reward(
     val transactionData: RewardTransaction,
     val retailerName: String,
     val retailerId: Long,
-    val logo: String?=""
+    val logo: String? = ""
 ) : Serializable
+
 data class RetailerOpenAndCloseTime(
     val id: String,
     val day: String,
@@ -485,6 +514,7 @@ data class BookingSlots(
     val mallName: String,
     val mallId: Long
 ) : Serializable
+
 data class TransactionHistoryList(
     val id: Int,
     val transactionId: String,
@@ -501,6 +531,7 @@ data class TransactionHistoryList(
     val retailerLogo: String,
     val createdAt: String
 ) : Serializable
+
 data class NotificationObject(
     val id: Long,
     val dataMessage: DataMessage,
@@ -509,6 +540,7 @@ data class NotificationObject(
     val mallId: Long,
     val isRead: Int,
 ) : Serializable
+
 data class Banner(
     val id: Long,
     val bannerName: String,
@@ -522,11 +554,13 @@ data class Banner(
     val isDeleted: Int,
     val mallId: Int
 )
+
 data class DataMessage(
     val message_title: String,
     val message_body: String,
     val data_message: ClickHandling
 ) : Serializable
+
 data class ClickHandling(
     var notification_id: Long,
     var type: Int,
@@ -535,16 +569,18 @@ data class ClickHandling(
     var image_video: String,
     var url: String,
     var title: String,
-    var classification:String,
+    var classification: String,
     var description: String,
     var referral: String,
     var notification_details: String
 ) : Serializable
+
 data class MallCityData(
     val city: String,
     val malls: ArrayList<Mall>,
     var isSelected: Boolean = false
 ) : Serializable
+
 data class Mall(
     val id: Long,
     val mallName: String,
@@ -560,16 +596,19 @@ data class Mall(
     val venueId: Int,
     val helpDeskLocations: ArrayList<HelpDeskLocation>
 ) : Serializable
+
 data class HelpDeskLocation(
     val deskName: String,
     val deskLocation: String
-):Serializable
+) : Serializable
+
 data class RetailerCategoryCoupon(
     val id: Long,
     val name: String,
     val image: String = "",
     var isSelected: Boolean = false
 ) : Serializable
+
 data class HomeData(
     val userData: User,
     val booking: BookingSlots,
@@ -581,6 +620,7 @@ data class HomeData(
     val parking: ParkingHome,
     val homeBottom: ArrayList<Banner>
 )
+
 data class RetailerRatings(
     val totalRatingsCount: Long,
     val averageRating: Float,
@@ -594,6 +634,7 @@ data class RetailerCatalogPhoto(
     val title: String,
     val mediaType: String
 ) : Serializable
+
 data class RetailerCoupon(
     var id: Long,
     val displayName: String,
@@ -644,7 +685,7 @@ data class RetailerCoupon(
     var isShowingRewards: Boolean = false,
     val mallName: String,
     val isPhysicalVoucher: Boolean = false,
-    val isPhysicallyHandedOver: Int ,
+    val isPhysicallyHandedOver: Int,
     var isSelected: Boolean = false,
     val isFavorite: Number,
     val isPhysicallyDelivered: Number,
@@ -668,6 +709,7 @@ data class RetailerPhoto(
     val imageUrl: String,
     val mediaType: String
 ) : Serializable
+
 data class RetailerInfoAboutData(
     val id: Long,
     val retailerName: String,
@@ -693,13 +735,15 @@ data class RetailerInfoAboutData(
     var isFavorite: Number,
     var isHeaderVisible: Boolean = false,
     var floorLabel: String = "",
-    var floorNumber: Number=0,
+    var floorNumber: Number = 0,
 ) : Serializable
+
 data class RetailerPhoneNumber(
     val id: Long,
     val countryCode: Long,
     val phoneNumber: Long
 ) : Serializable
+
 data class Category(
     val id: Long,
     val categoryName: String,
@@ -710,11 +754,13 @@ data class Category(
     var isFav: Boolean = false,
     var drawable: Int? = null
 ) : Serializable
+
 data class Tag(
     val id: Long,
     val hexCode: String,
     val tagName: String
 ) : Serializable
+
 data class User(
     val id: String,
     var firstName: String,
@@ -752,6 +798,7 @@ data class User(
     val reactivationCode: Any,
     val deletionRequestedAt: String
 ) : Serializable
+
 data class NewsFeed(
     val id: Long,
     val title: String,
@@ -773,17 +820,20 @@ data class NewsFeed(
     val retailerDetails: RetailerDetails,
     val sharedUrl: String
 ) : Serializable
+
 data class PuzzleFeed(
     val puzzles: MutableList<Puzzles>?,
     val totalPoints: String,
     val gems: String,
     val totalPages: Int?,
-    val id : String
-): Serializable
+    val id: String
+) : Serializable
+
 data class SpinWheelFeedWrapper(
     val status: Status,
     val data: SpinWheelFeed
 )
+
 data class Puzzles(
     val id: String,
     val unlockType: Long,
@@ -802,6 +852,7 @@ data class Puzzles(
     val imageGridType: Int,
     val benefitsData: ArrayList<BenefitsDataPuzzle>,
 ) : Serializable
+
 data class BenefitsDataPuzzle(
     val benefitId: Long,
     val benefitType: Long,
@@ -811,10 +862,12 @@ data class BenefitsDataPuzzle(
     val name: String,
     val value: Any,
 ) : Serializable
+
 data class PuzzleFeedWrapper(
     val status: Status,
     val data: PuzzleFeed
 )
+
 data class Status(
     val code: Int,
     val message: String

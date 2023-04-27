@@ -21,7 +21,7 @@ interface ApiService {
     fun getLoyaltyHub(
         @Header("Authorization") token: String,
         @Header("mallId") mallId: String,
-    ) : Call<ServerResponse>
+    ): Call<ServerResponse>
 
     @GET("customers/imagePuzzle")
     fun getPuzzleFeed(
