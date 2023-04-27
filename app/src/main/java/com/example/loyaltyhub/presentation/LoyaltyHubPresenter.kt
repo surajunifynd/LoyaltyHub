@@ -1,13 +1,10 @@
 package com.example.loyaltyhub.presentation
 
-import com.example.loyaltyhub.LoyaltyHubView
 import com.example.loyaltyhub.data.api.RetrofitClient
 import com.example.loyaltyhub.getErrorResponse
 import com.example.loyaltyhub.model.ServerResponse
-import com.example.loyaltyhub.repository.LoyaltyHubRepository
 import com.example.loyaltyhub.ui.view.LoyaltyView
 import retrofit2.Call
-import retrofit2.Callback
 import retrofit2.Response
 
 class LoyaltyHubPresenter(private val loyaltyPresenter: LoyaltyView) {
