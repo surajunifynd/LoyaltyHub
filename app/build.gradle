@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
+apply plugin: 'kotlin-kapt'
 
 android {
     namespace 'com.example.loyaltyhub'
@@ -57,4 +58,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:adapter-rxjava:2.4.0'
     implementation "com.squareup.okhttp3:logging-interceptor:4.10.0"
     implementation "com.jakewharton.timber:timber:5.0.1"
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
 }
